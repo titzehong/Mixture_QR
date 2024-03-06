@@ -6,11 +6,13 @@ This repository contains code to run the mixture EPA model.
 - Model autoamtically detects if X are multivariate and does the appropriate projection as described.
 
 ## To run just QR
+- You will need to specify a grid of quantile values, ideally this grid is fine so about 100 values from 0.01 - 0.99. See XX for adding more quantile points at tails
+- One key option is choosing the quantile function. This can be either normal ('norm') or student-t ('t'). This depends on distribution of responses and whether a more robust model is needed.
 ```
 from Single_Var_QR import SingleQRSampler_T_4_block
 
 quantile_dist = 'norm'
-prior_on_t = False
+prior_on_t = True
 
 # Choose no. of chains
 n_chains = 2
