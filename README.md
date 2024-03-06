@@ -6,6 +6,7 @@ This repository contains code to run the mixture EPA model.
 - Model autoamtically detects if X are multivariate and does the appropriate projection as described.
 
 ## To run just QR
+```
 from Single_Var_QR import SingleQRSampler_T_4_block
 
 quantile_dist = 'norm'
@@ -34,7 +35,7 @@ tau_grid_expanded = np.concatenate([np.array([-0.01,0]),
                                     np.array([1,1.01])])
 
 # Run Sampler
-sampler_collecter_4blockt = [SingleQRSampler_T_4_block(y_train,
+sampler_collecter_4blockt = SingleQRSampler_T_4_block(y_train,
                                     X_train,          
                                     C_1 = 0.3,
                                     lambda_step_size_1 = 3,
@@ -68,7 +69,8 @@ sampler_collecter_4blockt = [SingleQRSampler_T_4_block(y_train,
                                     base_quantile_v=1.0,
                                     base_quantile_dist=quantile_dist,
                                     prior_on_t=prior_on_t,
-                                    splice=True) for _ in range(n_chains)]
+                                    splice=True) 
+```
 
 ## To run just EPA Regression
 
