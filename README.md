@@ -77,3 +77,6 @@ sampler_collecter_4blockt = SingleQRSampler_T_4_block(y_train,
 ## To run just EPA Regression
 
 ## To run EPA - QR 
+- TODO: Put mixture QR into a class / function
+- Currently see Xu Data Analysis Multivariate.ipynb for an example of how to run the mixture QR
+- Currently see Xu Data Analysis Multivariate and Longitudinal.ipynb for an example of how to run the mixture QR on longitudinal data
